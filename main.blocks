@@ -1,0 +1,57 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="BLOCKLY_TILESET_TYPE" id="2wi8jv#ttkg)5_0~_U*2">0;16;16;0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000</variable><variable type="KIND_SpriteKind" id="E5FljmZ@Q4.,YUW|!8Tv">Player</variable><variable type="KIND_SpriteKind" id=".R,IoB4^{}/|M(xviq^A">Projectile</variable><variable type="KIND_SpriteKind" id=",EZ*xB;qj$JQM_H3Ln(f">Food</variable><variable type="KIND_SpriteKind" id=";M-C^tAr@}Kog5@~xHYn">Enemy</variable><variable id="}::4OL,(7WKC-Xquv;@g">player1</variable><variable id="[I%)ip_dQ^Y{cGreHB9z">coin</variable><variable id="{OCca;)/bJiO+]5]nohw">mySprite</variable></variables><block type="function_definition" x="0" y="16"><mutation name="setup" functionid="Ixg/?J/x~pZVWrr{7(hy"/><field name="function_name">setup</field><statement name="STACK"><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(
+            hex`10001000020202020202020202020202020202020202060606060606060606060802020202020602020202020202031006020202020206020304040404040b06080202020202060209020202020c0f06080202020202060209020202020209060606020202020602090404040a040e020206020202020602090202020902090202060202020206020902030409040b020206020202020602090209020902020202060202020206020c040e020d04040f020602020202060202020c0a0b020209020602020202060202020209020202090206020202020602020202090202020c040602020202060606060601060606060606020202020202020206060602020202020202`,
+            img`
+. . . . . . . . . . . . . . . . 
+. . 2 2 2 2 2 2 2 2 2 2 . . . . 
+. . 2 . . . . . . . . . 2 . . . 
+. . 2 . . . . . . . . 2 . . . . 
+. . 2 . . . . . . . . 2 . . . . 
+. . 2 . . . . . . . . 2 2 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 . . . . . . . . . . 2 . . 
+. . 2 2 2 2 2 . 2 2 2 2 2 2 . . 
+. . . . . . 2 2 2 . . . . . . . 
+`,
+            [myTiles.tile0,sprites.dungeon.buttonTeal,sprites.dungeon.hazardLava0,sprites.vehicle.roadTurn1,sprites.vehicle.roadHorizontal,sprites.castle.rock1,sprites.builtin.brick,sprites.dungeon.buttonTealDepressed,sprites.dungeon.hazardLava1,sprites.vehicle.roadVertical,sprites.vehicle.roadIntersection3,sprites.vehicle.roadTurn4,sprites.vehicle.roadTurn3,sprites.vehicle.roadIntersection2,sprites.vehicle.roadIntersection4,sprites.vehicle.roadTurn2,sprites.dungeon.buttonOrange],
+            TileScale.Sixteen
+        )</field><next><block type="variables_set"><field name="VAR" id="}::4OL,(7WKC-Xquv;@g">player1</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . f . . . . . . . 
+. . . . . . . f f f . . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . . f 1 1 1 f . . . . . 
+. . . . . . f 1 9 1 f . . . . . 
+. . . . . . f 1 1 1 f . . . . . 
+. . . . . . f 1 1 1 f . . . . . 
+. . . . . . f f f f f . . . . . 
+. . . . . . 2 4 5 4 2 . . . . . 
+. . . . . . 2 4 4 4 2 . . . . . 
+. . . . . . . 2 2 2 . . . . . . 
+. . . . . . . . 2 . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="variables_set"><field name="VAR" id="[I%)ip_dQ^Y{cGreHB9z">coin</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . 4 4 4 4 . . . . . . 
+. . . . 4 4 4 5 5 4 4 4 . . . . 
+. . . 3 3 3 3 4 4 4 4 4 4 . . . 
+. . 4 3 3 3 3 2 2 2 1 1 4 4 . . 
+. . 3 3 3 3 3 2 2 2 1 1 5 4 . . 
+. 4 3 3 3 3 2 2 2 2 2 5 5 4 4 . 
+. 4 3 3 3 2 2 2 4 4 4 4 5 4 4 . 
+. 4 4 3 3 2 2 4 4 4 4 4 4 4 4 . 
+. 4 2 3 3 2 2 4 4 4 4 4 4 4 4 . 
+. . 4 2 3 3 2 4 4 4 4 4 2 4 . . 
+. . 4 2 2 3 2 2 4 4 4 2 4 4 . . 
+. . . 4 2 2 2 2 2 2 2 2 4 . . . 
+. . . . 4 4 2 2 2 2 4 4 . . . . 
+. . . . . . 4 4 4 4 . . . . . . 
+. . . . . . . . . . . . . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Food</field></shadow></value></block></value><next><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">20</field></shadow></value><next><block type="hudsetScore"><value name="value"><shadow type="math_number"><field name="NUM">0</field></shadow></value><next><block type="game_control_sprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="sprite"><shadow type="variables_get"><field name="VAR" id="}::4OL,(7WKC-Xquv;@g">player1</field></shadow></value><next><block type="camerafollow"><value name="sprite"><shadow type="variables_get"><field name="VAR" id="}::4OL,(7WKC-Xquv;@g">player1</field></shadow></value><next><block type="mapplaceonrandomtile"><value name="sprite"><block type="variables_get"><field name="VAR" id="}::4OL,(7WKC-Xquv;@g">player1</field></block></value><value name="tile"><shadow type="tileset_tile_picker"><field name="tile">sprites.dungeon.buttonTeal</field></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="pxt-on-start" x="550" y="10"><statement name="HANDLER"><block type="function_call"><mutation name="setup" functionid="Ixg/?J/x~pZVWrr{7(hy"/></block></statement></block></xml>
